@@ -10,6 +10,7 @@
 게임 장르|TPS
 ---
 ## 영상 및 블로그
+![Thumbnail](https://user-images.githubusercontent.com/58097724/126139616-01b19eab-f00d-4687-aeab-74cfd863a30b.PNG)
 ### [Youtube](https://www.youtube.com/watch?v=kStbSjYVQe8&t=15s) / [Blog](https://online-unreal.tistory.com/)
 ---
 ## 기술 설명
