@@ -41,3 +41,11 @@
 * ##### Rifle Blend Space
 ![Rifle Blend](https://user-images.githubusercontent.com/58097724/126174827-69c39d9b-231a-4700-8121-245cda58124f.gif)
 
+### Weapon
+* Main Class 에서 Weapon Class를 가져와 **Fire() 함수를 재귀 호출**하여 총을 연사로 발사할 수 있도록 함
+* **총알은 Projectile Base Class**를 만들어서 **Weapon Class에서 생성**하도록 함
+![Equip Weapon](https://user-images.githubusercontent.com/58097724/126193277-1b60902d-23c9-4042-b3a7-b564dec56ca6.PNG)
+![Weapon Fire](https://user-images.githubusercontent.com/58097724/126186943-48f9924e-7dc9-4841-898b-5381f8497de9.PNG)
+
+
+
