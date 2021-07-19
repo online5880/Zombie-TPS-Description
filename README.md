@@ -15,7 +15,7 @@
 ### [Youtube](https://www.youtube.com/watch?v=kStbSjYVQe8&t=15s) / [Blog](https://online-unreal.tistory.com/)
 ---
 ## 기술 설명
-### C++ 파일 설명
+### C++ 파일 
 * **Character(AnimInstance), Zombie(AnimInstance, AIController) Class** 를 각각 생성
 * **Zombie BehaviorTree C++** 제작
 * **Inventory**를 게임에 넣진 않았지만 제작하였기때문에 추가 가능
@@ -24,7 +24,20 @@
 
 ![C++](https://user-images.githubusercontent.com/58097724/126120901-8ce8fc07-f83e-4ed3-9a34-472eb98a3915.png)
 ---
-### MainMenu 설명
-* **Seqeunce**를 제작하여 재생하는 방식으로 몰입감을 줌
+### MainMenu 
+* **Seqeunce**를 제작하여 **재생하는 방식**으로 몰입감을 줌
 
 ![ezgif-3-749f14b06819](https://user-images.githubusercontent.com/58097724/126139164-c5f253f0-2c07-4afd-a56b-0b7b73927d4e.gif)
+---
+### Character Movement 
+* 캐릭터의 움직임은 **8 way로 Speed와 Direction을 구하여 움직임**에 맞게 동작하도록 함
+* 걷기, 달리기, 점프 구현(**State에 따라 다름**)
+* **Enum class(Normal, Rifle)** 을 생성하여 **State에 변화** 를 줌
+  * **2개의 Blend Space를 생성**하여 움직임을 다르게 함
+ 
+* ##### Normal Blend Space
+ ![Normal Blend](https://user-images.githubusercontent.com/58097724/126175163-fb1f68d1-286c-450c-8ccd-6a1496d08cb9.gif)
+
+* ##### Rifle Blend Space
+![Rifle Blend](https://user-images.githubusercontent.com/58097724/126174827-69c39d9b-231a-4700-8121-245cda58124f.gif)
+
