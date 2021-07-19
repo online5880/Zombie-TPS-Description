@@ -24,3 +24,5 @@
 ---
 ### MainMenu 설명
 * Seqeunce를 제작하여 재생하는 방식으로 몰입감을 줌
+
+![ezgif-3-749f14b06819](https://user-images.githubusercontent.com/58097724/126139164-c5f253f0-2c07-4afd-a56b-0b7b73927d4e.gif)
