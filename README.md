@@ -18,7 +18,7 @@
 ---
 기술 설명
 ---
-### C++ 파일 
+### C++ 파일   
 * **Character(AnimInstance), Zombie(AnimInstance, AIController) Class** 를 각각 생성
 * **Zombie BehaviorTree C++** 제작
 * **Inventory**를 게임에 넣진 않았지만 제작하였기때문에 추가 가능
@@ -26,11 +26,11 @@
 * **Linetrace**를 이용하여 아이템(이름, 정보) 습득 가능   
 ![C++](https://user-images.githubusercontent.com/58097724/126120901-8ce8fc07-f83e-4ed3-9a34-472eb98a3915.png)
 ---
-### MainMenu 
+### MainMenu   
 * **Seqeunce**를 제작하여 **재생하는 방식**으로 몰입감을 줌   
 ![ezgif-3-749f14b06819](https://user-images.githubusercontent.com/58097724/126139164-c5f253f0-2c07-4afd-a56b-0b7b73927d4e.gif)
 ---
-### Character Movement 
+### Character Movement   
 * 캐릭터의 움직임은 **8 way로 Speed와 Direction을 구하여 움직임**에 맞게 동작하도록 함
 * 걷기, 달리기, 점프 구현(**State에 따라 다름**)
 * **Enum class(Normal, Rifle)** 을 생성하여 **State에 변화** 를 줌
@@ -43,6 +43,7 @@
 ![Rifle Blend](https://user-images.githubusercontent.com/58097724/126174827-69c39d9b-231a-4700-8121-245cda58124f.gif)
 
 * 지면에 **Linetrace**를 발사해서 **SurfaceType을 검사**하여 그에 맞는 **발소리와 효과**를 발생
+> Footstep
 ```C++
 void UMain_AnimInstance::Footstep()
 {
@@ -63,13 +64,14 @@ void UMain_AnimInstance::Footstep()
 ```
 ![SurfaceType](https://user-images.githubusercontent.com/58097724/126253930-aa401852-da84-4909-bb16-478c8284e963.gif)   
 ---
-### Weapon
+### Weapon   
 * **게임 시작 시 무기 부착**   
 ![Equip Weapon](https://user-images.githubusercontent.com/58097724/126193277-1b60902d-23c9-4042-b3a7-b564dec56ca6.PNG)
 * Main Class 에서 Weapon Class를 가져와 **Fire() 함수를 재귀 호출**하여 총을 연사로 발사할 수 있도록 함
   * 발사하면 **NoiseEvent** 발생   
 ![Weapon Fire](https://user-images.githubusercontent.com/58097724/126186943-48f9924e-7dc9-4841-898b-5381f8497de9.PNG)
 * **총알은 Projectile Base Class**를 만들어서 **Weapon Class에서 생성**하도록 함
+> Weapon Fire
 ```C++
 void AWeapon_Base::MultiFire_Start_Implementation(class AMain* Actor)
 {
@@ -129,12 +131,12 @@ UNiagaraFunctionLibrary::SpawnSystemAttached(Rifle_Muzzle_Niagara,Body_Mesh,FNam
  }
 ```
 ---
-### Projectile
+### Projectile   
 * **Projectile Base Class**는 Bullet **StaticMesh**와 이를 감싸는 **CapsuleComponent** 그리고 **ProjectileMovementComponent**로 구성
 * **Physical Material**을 제작하여 부딪혔을 경우 Type에 맞는 효과가 일어나도록 구현 (**Bullet Decal 생성**)
 ![Projectile](https://user-images.githubusercontent.com/58097724/126194750-fc9a6972-5b2e-45f1-afe5-742495a78da5.PNG)
 ---
-### Grenade
+### Grenade   
 * **수류탄은 던지는 각도**를 구하여 **2가지 모션**으로 구현   
 ![Grenade Pitch](https://user-images.githubusercontent.com/58097724/126254927-54c86699-dc19-4af8-ac10-3afc66d3eddb.gif)
 
@@ -142,10 +144,13 @@ UNiagaraFunctionLibrary::SpawnSystemAttached(Rifle_Muzzle_Niagara,Body_Mesh,FNam
 ![Grenade Type](https://user-images.githubusercontent.com/58097724/126254948-7ebbf5e1-f2ab-42fa-ac6b-754aee9a1635.gif)
 
 * **MultiSphereTraceForObject**를 사용하여 **수류탄 주변 물체 검사(Zombie, Player)** 후 **Apply Radial Damage를 줌**
-* **Damage를 입혔을 경우 Blood Decal 생성**
+* **Damage를 입혔을 경우 Blood Decal 생성**   
+![Grenade](https://user-images.githubusercontent.com/58097724/126256521-c9c459bd-2b2e-4ed5-9a87-ca8b3d394d60.gif)   
 ![Grenade BP-1](https://user-images.githubusercontent.com/58097724/126255811-59f7e8c8-a39f-489a-ade8-4b81418683eb.PNG)   
 ![Grenade BP-2](https://user-images.githubusercontent.com/58097724/126255979-a7dfcba7-7f6d-4356-b184-6f8f113190ce.PNG)   
-![Grenade BP-3](https://user-images.githubusercontent.com/58097724/126255843-fb8df8a3-7d20-437c-85d3-d4cefd03ad1e.PNG)
+![Grenade BP-3](https://user-images.githubusercontent.com/58097724/126255843-fb8df8a3-7d20-437c-85d3-d4cefd03ad1e.PNG)   
+
+
 
 
 
