@@ -149,8 +149,20 @@ UNiagaraFunctionLibrary::SpawnSystemAttached(Rifle_Muzzle_Niagara,Body_Mesh,FNam
 ![Grenade BP-1](https://user-images.githubusercontent.com/58097724/126255811-59f7e8c8-a39f-489a-ade8-4b81418683eb.PNG)   
 ![Grenade BP-2](https://user-images.githubusercontent.com/58097724/126255979-a7dfcba7-7f6d-4356-b184-6f8f113190ce.PNG)   
 ![Grenade BP-3](https://user-images.githubusercontent.com/58097724/126255843-fb8df8a3-7d20-437c-85d3-d4cefd03ad1e.PNG)   
-
-
+---
+### Zombie
+* Zombie Type
+  * **좀비는 총 5가지로 Material을 바꿔줌으로써 좀 더 다양해 보이도록 함**   
+![Zombie Type](https://user-images.githubusercontent.com/58097724/126269780-61883655-30f7-4ebd-8907-afa7c0c361ca.gif)   
+* Zombie Animation
+  * **좀비 모션은 걷는 모션 2개, 뛰는 모션 2개, 공격 모션 2개, 기어오는 모션 1개, 죽는 모션 3개로 구성**   
+![Zombie Animation](https://user-images.githubusercontent.com/58097724/126270334-1942ffc5-972e-4149-b8cd-bb8f09737941.gif)   
+* Zombie AI
+  * **AI Perception**을 통해 시야에 들어오면 Player인지 판단하고 쫓아감
+  * **FGenericTeamId GetGenericTeamId()** 함수를 사용하여 TeamId 부여
+  * **총소리에 반응**하며 발생한 위치로 이동하도록 함
+   ![Zombie AI](https://user-images.githubusercontent.com/58097724/126273933-57f7b6fa-6347-44eb-b316-0e35c664bb2f.gif)   
+   ![BehaviorTree](https://user-images.githubusercontent.com/58097724/126274168-130aeccb-ffe9-4781-beeb-ed164dd093f1.PNG)
 
 
 
